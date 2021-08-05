@@ -7,15 +7,16 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Gatsby Navigation utilising Styled Components and useState hook`,
-    description: `Responsive navigation using styled components and useState hook - Gatsby / React Navbar`,
-    author: `Wojciech Snopkowski`,
+    title: `Title`,
+    description: `description`,
+    author: `Dexter Griffiths`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-fontawesome-css`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

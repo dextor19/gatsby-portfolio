@@ -1,12 +1,12 @@
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
   :root {
-    --primary-color: #001730;
+    --primary-color: #196368;
     --secondary-color: #4AD7D1;
     --tertiary-color: #FE4A49;
-    --white: #FFFAFF;
+    --white: #FFFFFF;
+    --black: #0A0A0A;
   }
   * {
     box-sizing: border-box;
@@ -18,15 +18,16 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     margin: 0;
+    background-color: white;
   }
   main {
     flex: 1 0 auto;
     h1,h2,h3,h4,h5,h6 {
     font-family: Roboto;
-    color: var(--primary-color);
+    color: var(--white);
     }
     a {
-      color: #2A5DB0;
+      color: var(--white);
     }
   }
   a {

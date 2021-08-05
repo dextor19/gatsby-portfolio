@@ -6,10 +6,9 @@ import Logo from "./Logo"
 const Navigation = styled.nav`
   height: 10vh;
   display: flex;
-  background-color: var(--primary-color);
+  background-color: transparent;
   position: relative;
   justify-content: space-between;
-  border-bottom: 2px solid #33333320;
   margin: 0 auto;
   padding: 0 5vw;
   z-index: 2;
@@ -17,11 +16,11 @@ const Navigation = styled.nav`
 
   @media (max-width: 768px) {
     position: sticky;
+    background-color: black;
     height: 8vh;
     top: 0;
     left: 0;
     right: 0;
-    left: 0;
   }
 `
 
@@ -48,7 +47,7 @@ const Navbox = styled.div`
     width: 100%;
     justify-content: flex-start;
     padding-top: 10vh;
-    background-color: var(--primary-color);
+    background-color: black;
     transition: all 0.3s ease-in;
     top: 8vh;
     left: ${props => (props.open ? "-100%" : "0")};

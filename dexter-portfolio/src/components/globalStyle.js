@@ -2,11 +2,13 @@ import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --primary-color: #196368;
+    --primary-color: #031521;
     --secondary-color: #4AD7D1;
     --tertiary-color: #FE4A49;
     --white: #FFFFFF;
     --black: #0A0A0A;
+    --link: #209a92;
+    --link-hover: #24ded2;
   }
   * {
     box-sizing: border-box;
@@ -21,10 +23,11 @@ export const GlobalStyle = createGlobalStyle`
     background-color: white;
   }
   main {
-    flex: 1 0 auto;
+    max-width: 800px;
+    margin: 0 auto;
     h1,h2,h3,h4,h5,h6 {
     font-family: Roboto;
-    color: var(--white);
+    color: black;
     }
     a {
       color: var(--white);
@@ -213,20 +216,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     overflow-y: scroll;
   }
-  * {
-    box-sizing: inherit;
-  }
-  *:before {
-    box-sizing: inherit;
-  }
-  *:after {
-    box-sizing: inherit;
-  }
-  body {
-    color: hsla(0, 0%, 0%, 0.8);
-    font-weight: normal;
-    word-wrap: break-word;
-  }
   img {
     max-width: 100%;
     margin-left: 0;
@@ -237,21 +226,6 @@ export const GlobalStyle = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-  }
-  h1 {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    margin-bottom: 1.45rem;
-    color: inherit;
-    font-weight: bold;
-    text-rendering: optimizeLegibility;
-    font-size: 2.25rem;
-    line-height: 1.1;
   }
   h2 {
     margin-left: 0;
@@ -266,21 +240,6 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1.62671rem;
-    line-height: 1.1;
-  }
-  h3 {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    margin-bottom: 1.45rem;
-    color: inherit;
-    font-weight: bold;
-    text-rendering: optimizeLegibility;
-    font-size: 1.38316rem;
     line-height: 1.1;
   }
   h4 {
@@ -377,16 +336,6 @@ export const GlobalStyle = createGlobalStyle`
     margin-bottom: 1.45rem;
   }
   dd {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    margin-bottom: 1.45rem;
-  }
-  p {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;

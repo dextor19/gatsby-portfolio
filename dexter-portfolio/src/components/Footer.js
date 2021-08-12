@@ -5,9 +5,7 @@ import { Container } from "./layoutComponents"
 const Footer = ({ className }) => (
   <footer className={className}>
     <Container>
-      © {new Date().getFullYear()}, Built with
-      {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
+      © {new Date().getFullYear()}, Dexter Griffiths
     </Container>
   </footer>
 )

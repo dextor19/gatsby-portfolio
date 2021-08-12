@@ -7,11 +7,6 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 const StyledHero = styled.div`
     min-width: 100%;
     min-height: 100vh;
-    margin-top: -10vh;
-    
-    @media (max-width: 768px) {
-        margin-top: 0;
-      }
 `
 
 const StyledVideo = styled.video`
@@ -27,6 +22,11 @@ const HeroContent = styled.div`
 `
 const HeroH1 = styled.h1`
     text-align: center;
+    font-size: 50px;
+    color: white;
+`
+const HeroP = styled.p`
+    text-align: center;
     color: white;
 `
 
@@ -38,7 +38,9 @@ const Hero = (props) => {
       <StyledHero>
         <StyledVideo autoPlay loop muted width={width} height={height} src={Video} type='video/mp4' />
         <HeroContent>
-            <HeroH1>Web Developer <FontAwesomeIcon icon={ faArrowDown } /> </HeroH1>
+            <HeroH1>Dexter Griffiths</HeroH1>
+            <HeroP>BRITISH WEB DEVELOPER LIVING IN JAPAN</HeroP>
+            <FontAwesomeIcon icon={ faArrowDown } /> 
         </HeroContent>
       </StyledHero>
     )

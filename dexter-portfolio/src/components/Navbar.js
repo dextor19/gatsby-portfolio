@@ -1,12 +1,13 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import NavbarLinks from "./NavbarLinks"
 import Logo from "./Logo"
 
 const Navigation = styled.nav`
   height: 10vh;
+  width: 100%;
   display: flex;
-  background-color: transparent;
+  background-color: var(--primary-color);
   position: relative;
   justify-content: space-between;
   margin: 0 auto;
@@ -16,7 +17,7 @@ const Navigation = styled.nav`
 
   @media (max-width: 768px) {
     position: sticky;
-    background-color: black;
+    background-color: var(--primary-color);
     height: 8vh;
     top: 0;
     left: 0;
@@ -47,7 +48,7 @@ const Navbox = styled.div`
     width: 100%;
     justify-content: flex-start;
     padding-top: 10vh;
-    background-color: black;
+    background-color: var(--primary-color);
     transition: all 0.3s ease-in;
     top: 8vh;
     left: ${props => (props.open ? "-100%" : "0")};
@@ -85,8 +86,8 @@ const Hamburger = styled.div`
     top: 10px;
   }
 `
-const Navbar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false)
+const Navbar = ({location}) => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
     <Navigation>

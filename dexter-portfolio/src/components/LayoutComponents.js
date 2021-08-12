@@ -1,9 +1,13 @@
 import styled from "styled-components"
 
 export const MainWrapper = styled.div`
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+`
+export const Section = styled.section`
+  height: 100vh;
   display: flex;
-  min-height: 100vh;
+  justify-content: center;
   flex-direction: column;
 `
 

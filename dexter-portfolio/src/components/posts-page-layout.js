@@ -6,6 +6,21 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "./Layout"
 import SEO from "./SEO"
 import components from "./mdxComponents"
+import styled from "styled-components"
+
+export const PostLayoutLink = styled(Link)`
+    margin: 4rem 0 2rem 0;
+    display: block;
+    padding: 0 1rem 3rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--link);
+
+    &:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+`
 
 export default function PageTemplate({ data: { mdx } }) {
   return (
@@ -32,9 +47,9 @@ export default function PageTemplate({ data: { mdx } }) {
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
         </div>
-        <Link className="template__link" to={`/blog`} style={{}}>
+        <PostLayoutLink to={`/blog`}>
           ← Back to posts
-        </Link>
+        </PostLayoutLink>
       </Layout>
     </>
   )

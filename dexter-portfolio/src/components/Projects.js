@@ -13,6 +13,8 @@ const StyledProjectsSection = styled.section`
   align-items: center;
   background-color: #233554;
   min-height: 80vh;
+  border-bottom: 1px solid #2f4975;
+  border-top: 1px solid #2f4975;
   
   h2 {
     color: var(--white);

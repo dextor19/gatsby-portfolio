@@ -9,15 +9,6 @@ export const MainWrapper = styled.div`
     max-width: 100%;
   }
 `
-export const IndexMainWrapper = styled.div`
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0;
-  @media screen and (max-width: 768px) {
-    padding: 0;
-    max-width: 100%;
-  }
-`
 
 export const Section = styled.section`
   height: 100vh;

@@ -7,6 +7,7 @@ import SEO from "../components/SEO"
 import Hero from "../components/Hero"
 import Projects from "../components/Projects"
 import ContactForm from "../components/Contact"
+import About from "../components/About"
 import { Container, Section } from "../components/layoutComponents"
 
 const IndexPage = () => {
@@ -26,6 +27,7 @@ const IndexPage = () => {
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <Hero />
       <Projects />
+      <About />
       <ContactForm />
     </Layout>
     </>

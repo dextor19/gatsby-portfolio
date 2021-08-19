@@ -7,8 +7,15 @@ const StyledContactSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f7f7f7;
+  background-color: #233554;
+  color: #fff;
   min-height: 80vh;
+  border-bottom: 1px solid #2f4975;
+  border-top: 1px solid #2f4975;
+
+  h1 {
+      color: #fff;
+  }
 
   textarea,
   input {
@@ -16,13 +23,17 @@ const StyledContactSection = styled.section`
       width: 20rem;
   }
   button {
-   background-color: #00C5BE;
-   border: none;
+   background-color: transparent;
+   border: 1px solid #64ffda;
+   border-radius: 4px;
    color: #fff;
    font-size: 1em;
    padding: 10px 50px;
    text-transform: uppercase;
    font-weight: normal;
+   :hover{
+      background-color: rgba(100, 255, 218, 0.1);
+    }
   }
 `;
 

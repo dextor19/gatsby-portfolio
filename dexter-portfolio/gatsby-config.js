@@ -32,6 +32,12 @@ module.exports = {
         extensions: ['.mdx', '.md'],
       },
     },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,

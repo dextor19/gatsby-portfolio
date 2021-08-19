@@ -22,6 +22,7 @@
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.10.2",
     "gatsby-image": "^3.10.0",
+    "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
     "gatsby-plugin-mdx": "^2.10.1",
     "gatsby-plugin-react-helmet": "^4.10.0",

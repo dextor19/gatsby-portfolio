@@ -66,7 +66,7 @@ const Contact = () => {
     }
 
     return (
-        <StyledContactSection>
+        <StyledContactSection id="contact">
             <h1>Get In Touch</h1>
             <form
                 name="contact"

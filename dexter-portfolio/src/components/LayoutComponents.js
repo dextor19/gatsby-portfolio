@@ -2,8 +2,23 @@ import styled from "styled-components"
 
 export const MainWrapper = styled.div`
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: ${props => props.padded ? "1200px" : "none"};
+  padding: ${props => props.padded ? "0 13rem" : "0"};
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    max-width: 100%;
+  }
 `
+export const IndexMainWrapper = styled.div`
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0;
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    max-width: 100%;
+  }
+`
+
 export const Section = styled.section`
   height: 100vh;
   display: flex;

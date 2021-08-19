@@ -35,7 +35,7 @@ export default function PageTemplate({ data: { mdx } }) {
           content={`https://pbs.twimg.com/profile_images/1227765372608057344/daNn331w_400x400.jpg`}
         /> */}
       </Helmet>
-      <Layout>
+      <Layout padding>
         <div style={{ padding: "0 1rem" }}>
           <h1>{mdx.frontmatter.title}</h1>
           <h4 className="template__post-info">

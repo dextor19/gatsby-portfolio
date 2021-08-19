@@ -45,13 +45,13 @@ const Navbox = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
-    width: 100%;
+    width: 50vh;
     justify-content: flex-start;
     padding-top: 10vh;
     background-color: var(--primary-color);
     transition: all 0.3s ease-in;
     top: 8vh;
-    left: ${props => (props.open ? "-100%" : "0")};
+    left: ${props => (props.open ? "-150%" : "0")};
   }
 `
 

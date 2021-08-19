@@ -14,7 +14,6 @@ const StyledFooter = styled(Footer)`
   color: var(--white);
   background: var(--primary-color);
   padding: 1rem 0;
-  margin-top: 1rem;
 `
 
 export default StyledFooter

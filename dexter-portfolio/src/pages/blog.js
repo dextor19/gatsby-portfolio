@@ -26,26 +26,28 @@ const BlogLink = styled(Link)`
 
 const BlogIndex = ({ location }) => {
     const data = useStaticQuery(graphql`
-    query blogIndex {
-      allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-        edges {
-          node {
-            id
-            frontmatter {
-              title
-              preview
-              slug
+        query blogIndex {
+            allMdx(
+            filter: {fileAbsolutePath: {regex: "/content/posts/"}}
+            sort: {order: DESC, fields: frontmatter___date}
+            ) {
+            edges {
+            node {
+                frontmatter {
+                slug
+                title
+                preview
+                }
+              }
             }
           }
         }
-      }
-    }
   `)
 
-  const { edges: posts } = data.allMdx
+  const { edges: posts } = data.allMdx;
 
   return (
-    <Layout location={location}>
+    <Layout location={location} padding>
       <BlogList>
         {posts.map(({ node: post }) => (
           <BlogListItem key={post.id}>

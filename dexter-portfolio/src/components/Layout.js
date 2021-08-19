@@ -7,7 +7,7 @@ import Navbar from "./Navbar"
 import { GlobalStyle } from "./globalStyle"
 import { MainWrapper } from "./layoutComponents"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, padding}) => {
       return (
         <>
           <GlobalStyle />
@@ -15,9 +15,15 @@ const Layout = ({ children }) => {
             <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
           </Helmet>
           <Navbar />
-          <MainWrapper>
-            <main>{children}</main>
-          </MainWrapper>
+            {padding ? (
+                <MainWrapper padded>
+                    <main>{children}</main>
+                </MainWrapper>
+            ) : ( 
+                <MainWrapper>
+                    <main>{children}</main>
+                </MainWrapper>
+            )}
           <Footer />
         </>
     )

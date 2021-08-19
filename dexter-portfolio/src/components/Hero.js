@@ -1,18 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import Video from "../assets/videos/video.mp4"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
-const StyledHero = styled.div`
-    min-width: 100%;
+const StyledHero = styled.section`
     min-height: 100vh;
-`
-
-const StyledVideo = styled.video`
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+    background-color: #f7f7f7;
 `
 const HeroContent = styled.div`
     position: absolute;
@@ -23,11 +16,11 @@ const HeroContent = styled.div`
 const HeroH1 = styled.h1`
     text-align: center;
     font-size: 50px;
-    color: white;
+    color: black;
 `
 const HeroP = styled.p`
     text-align: center;
-    color: white;
+    color: black;
 `
 
 const Hero = (props) => {
@@ -36,7 +29,6 @@ const Hero = (props) => {
     
     return(
       <StyledHero>
-        <StyledVideo autoPlay loop muted width={width} height={height} src={Video} type='video/mp4' />
         <HeroContent>
             <HeroH1>Dexter Griffiths</HeroH1>
             <HeroP>BRITISH WEB DEVELOPER LIVING IN JAPAN</HeroP>

@@ -5,18 +5,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   const result = await graphql(`
-    query {
-      allMdx {
-        edges {
-          node {
-            id
-            frontmatter {
-              slug
-            }
+  {
+    allMdx(filter: {fileAbsolutePath: {regex: "/content/posts/"}}) {
+      edges {
+        node {
+          id
+          frontmatter {
+            slug
           }
         }
       }
     }
+  }
   `)
 
   if (result.errors) {

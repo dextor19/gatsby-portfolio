@@ -7,6 +7,7 @@ import Layout from "./Layout"
 import SEO from "./SEO"
 import components from "./mdxComponents"
 import styled from "styled-components"
+import CallToAction from "../components/CallToAction"
 
 export const PostLayoutLink = styled(Link)`
     margin: 4rem 0 2rem 0;
@@ -50,6 +51,7 @@ export default function PageTemplate({ data: { mdx } }) {
         <PostLayoutLink to={`/blog`}>
           ← Back to posts
         </PostLayoutLink>
+        <CallToAction />
       </Layout>
     </>
   )

@@ -2,6 +2,11 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
+import CallToAction from "../components/CallToAction"
+
+const BlogBottomBorder = styled.div`
+    border-bottom: 1px solid var(--link);
+`
 
 const BlogList = styled.ul`
     padding: 1rem;
@@ -49,6 +54,8 @@ const BlogIndex = ({ location }) => {
   return (
     <Layout location={location} padding>
       <BlogList>
+        <h1>Latest Blog Posts</h1>
+        <BlogBottomBorder />
         {posts.map(({ node: post }) => (
           <BlogListItem key={post.id}>
             <BlogLink to={`/${post.frontmatter.slug}`}>
@@ -61,6 +68,7 @@ const BlogIndex = ({ location }) => {
           </BlogListItem>
         ))}
       </BlogList>
+      <CallToAction />
     </Layout>
   )
 }

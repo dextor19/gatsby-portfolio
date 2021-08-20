@@ -2,26 +2,22 @@ import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const StyledHero = styled.section`
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
     background-color: #f7f7f7;
-`
-const HeroContent = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-`
+`;
+
 const HeroH1 = styled.h1`
-    text-align: center;
     font-size: 50px;
-    color: black;
-`
-const HeroP = styled.p`
-    text-align: center;
-    color: black;
-`
+    margin-top: 0;
+    margin-bottom: 10px;
+`;
 
 const Hero = (props) => {
     const width = window.innerWidth;
@@ -29,11 +25,12 @@ const Hero = (props) => {
     
     return(
       <StyledHero>
-        <HeroContent>
-            <HeroH1>Dexter Griffiths</HeroH1>
-            <HeroP>BRITISH WEB DEVELOPER LIVING IN JAPAN</HeroP>
-            <FontAwesomeIcon icon={ faArrowDown } /> 
-        </HeroContent>
+        <h3>Hi, my name is</h3>
+        <HeroH1>Dexter Griffiths</HeroH1>
+        <p>BRITISH WEB DEVELOPER LIVING IN JAPAN</p>
+        <AnchorLink to="/#projects">
+            <FontAwesomeIcon icon={ faArrowDown } size="3x" color="black" /> 
+        </AnchorLink>
       </StyledHero>
     )
   }

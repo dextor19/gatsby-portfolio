@@ -8,7 +8,7 @@ const Navigation = styled.nav`
   width: 100%;
   display: flex;
   background-color: var(--primary-color);
-  position: relative;
+  position: ${props => (props.fixed ? "fixed" : "relative" )};
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 5vw;
@@ -87,11 +87,11 @@ const Hamburger = styled.div`
     top: 10px;
   }
 `
-const Navbar = ({location}) => {
+const Navbar = ({location, fixedNav}) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <Navigation>
+    <Navigation fixed={fixedNav}>
       <Logo />
       <Toggle
         navbarOpen={navbarOpen}

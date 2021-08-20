@@ -23,7 +23,7 @@ const IndexPage = () => {
   `)
   return (
     <>
-    <Layout>
+    <Layout fixedNavbar>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <Hero />
       <Projects />

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 
-const StyledAboutSection = styled.section`
+const StyledSkillsSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,13 +10,13 @@ const StyledAboutSection = styled.section`
   min-height: 80vh;
 `;
 
-const About = () => {
+const Skills = () => {
 
     return (
-        <StyledAboutSection id="about">
-            <h1>ABOUT</h1>
-        </StyledAboutSection>
+        <StyledSkillsSection>
+            <h1>SKILLS</h1>
+        </StyledSkillsSection>
     );
 };
 
-export default About;
+export default Skills;

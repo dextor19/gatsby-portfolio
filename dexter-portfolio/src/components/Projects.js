@@ -262,7 +262,7 @@ const Projects = () => {
 
   return (
     <StyledProjectsSection id="projects">
-      <h2 ref={revealTitle}>Latest Projects</h2>
+      <h2 ref={revealTitle}>LATEST PROJECTS</h2>
 
       <ul className="projects-grid">
         {prefersReducedMotion ? (

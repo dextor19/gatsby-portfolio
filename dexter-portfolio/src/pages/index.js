@@ -8,6 +8,7 @@ import Hero from "../components/Hero"
 import Projects from "../components/Projects"
 import ContactForm from "../components/Contact"
 import About from "../components/About"
+import Skills from "../components/Skills"
 import { Container, Section } from "../components/layoutComponents"
 
 const IndexPage = () => {
@@ -28,6 +29,7 @@ const IndexPage = () => {
       <Hero />
       <Projects />
       <About />
+      <Skills />
       <ContactForm />
     </Layout>
     </>

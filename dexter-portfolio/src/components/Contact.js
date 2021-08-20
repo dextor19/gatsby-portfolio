@@ -67,7 +67,7 @@ const Contact = () => {
 
     return (
         <StyledContactSection id="contact">
-            <h1>Get In Touch</h1>
+            <h1>GET IN TOUCH</h1>
             <form
                 name="contact"
                 method="post"

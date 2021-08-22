@@ -14,7 +14,6 @@ const StyledProjectsSection = styled.section`
   background-color: #233554;
   min-height: 80vh;
   border-bottom: 1px solid #2f4975;
-  border-top: 1px solid #2f4975;
   
   h2 {
     color: var(--white);
@@ -50,10 +49,29 @@ const StyledProjectsSection = styled.section`
     cursor: pointer;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     padding: 1.25rem 1.75rem;
-    margin: 80px auto 20px;
+    margin: 60px auto 60px;
     :hover{
       background-color: rgba(100, 255, 218, 0.1);
     }
+  }
+  .wave {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .wave svg {
+      position: relative;
+      display: block;
+      width: calc(129% + 1.3px);
+      height: 126px;
+  }
+
+  .wave .shape-fill {
+      fill: #f7f7f7;
   }
 `;
 
@@ -262,6 +280,11 @@ const Projects = () => {
 
   return (
     <StyledProjectsSection id="projects">
+      <div class="wave">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+          </svg>
+      </div>
       <h2 ref={revealTitle}>LATEST PROJECTS</h2>
 
       <ul className="projects-grid">

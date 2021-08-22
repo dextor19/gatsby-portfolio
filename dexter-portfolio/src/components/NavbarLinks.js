@@ -80,14 +80,30 @@ const NavItemAnchor = styled(AnchorLink)`
     z-index: 6;
   }
 `
+const CallToActionButton = styled.button`
+background-color: transparent;
+border: 1px solid #64ffda;
+border-radius: 4px;
+color: #64ffda;
+font-size: 1em;
+padding: 10px 30px;
+text-transform: uppercase;
+font-weight: normal;
+:hover{
+    background-color: rgba(100, 255, 218, 0.1);
+}
+`;
 
 const NavbarLinks = () => {
   return (
     <>
-      <NavItemAnchor to="/#about">About</NavItemAnchor>
+      <NavItem to="/">Home</NavItem>
       <NavItemAnchor to="/#projects">Work</NavItemAnchor>
+      <NavItemAnchor to="/#about">About</NavItemAnchor>
       <NavItem to="/blog">Blog</NavItem>
-      <NavItemAnchor to="/#contact">Contact</NavItemAnchor>
+      <AnchorLink to="/#contact">
+        <CallToActionButton>GET IN TOUCH</CallToActionButton>
+      </AnchorLink>
     </>
   )
 }

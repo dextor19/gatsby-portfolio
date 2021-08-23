@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 
@@ -21,34 +21,50 @@ const IconContainer = styled.div`
   width: 30px;
   height: 30px;
   padding-top: 3px;
-  
+  visibility: ${props => props.visible ? "visible" : "hidden"};
 `;
 
 const Layout = ({ children, padding, fixedNavbar}) => {
-      return (
-        <>
-          <GlobalStyle />
-          <Helmet>
-            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
-          </Helmet>
-          {fixedNavbar ? <Navbar fixedNav /> : <Navbar /> }
-            {padding ? (
-                <MainWrapper padded id="to-top">
-                    <main>{children}</main>
-                </MainWrapper>
-            ) : ( 
-                <MainWrapper id="to-top">
-                    <main>{children}</main>
-                </MainWrapper>
-            )}
-          <AnchorLink to="#to-top">
-            <IconContainer>
-              <FontAwesomeIcon icon={ faAngleUp } size="lg" color="white" /> 
-            </IconContainer>
-          </AnchorLink>
-          <Footer />
-        </>
-    )
+  const [angleUpIcon, setAngleUpIcon] = useState(false);
+  const changeBackground = () => {
+    if(window.scrollY >= 100){
+      setAngleUpIcon(true);
+    } else {
+      setAngleUpIcon(false);
+    };
+  };
+
+  window.addEventListener('scroll', changeBackground);
+
+  return (
+    <>
+      <GlobalStyle />
+      <Helmet>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+      </Helmet>
+      {fixedNavbar ? <Navbar fixedNav /> : <Navbar /> }
+        {padding ? (
+            <MainWrapper padded id="to-top">
+                <main>{children}</main>
+                <AnchorLink to="#to-top">
+                  <IconContainer visible={angleUpIcon ? 'visible' : ''}>
+                    <FontAwesomeIcon icon={ faAngleUp } size="lg" color="white" /> 
+                  </IconContainer>
+                </AnchorLink>
+            </MainWrapper>
+        ) : ( 
+            <MainWrapper id="to-top">
+                <main>{children}</main>
+                <AnchorLink to="/#to-top">
+                  <IconContainer visible={angleUpIcon ? 'visible' : ''}>
+                    <FontAwesomeIcon icon={ faAngleUp } size="lg" color="white" /> 
+                  </IconContainer>
+                </AnchorLink>
+            </MainWrapper>
+        )}
+      <Footer />
+    </>
+  )
 }
 
 Layout.propTypes = {

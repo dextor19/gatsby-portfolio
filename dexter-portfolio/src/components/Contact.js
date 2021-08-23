@@ -19,10 +19,14 @@ const StyledContactSection = styled.section`
       color: #fff;
   }
 
-  textarea,
+  textarea {
+    border: none;
+    width: 35rem;
+    height: 10rem;
+  }
   input {
       border: none;
-      width: 20rem;
+      width: 35rem;
   }
   button {
    background-color: transparent;
@@ -127,6 +131,13 @@ const Contact = () => {
                   EMAIL
                   <br />
                   <input type="email" name="email" onChange={handleChange} />
+              </label>
+              </p>
+              <p>
+              <label>
+                  SUBJECT
+                  <br />
+                  <input type="text" name="subject" onChange={handleChange} />
               </label>
               </p>
               <p>

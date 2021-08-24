@@ -16,6 +16,10 @@ const StyledHero = styled.section`
     justify-content: center;
     min-height: 100vh;
     background-color: #f7f7f7;
+
+    h3 {
+      margin-bottom: 0;
+    }
 `;
 
 const Container = styled.div`
@@ -33,12 +37,14 @@ const Container3 = styled.div`
   display: flex;
   flex-direction: row;
   svg {
-    background-color: #233554;
-    border-radius: 15px;
-    padding: 10px;
-    width: 45px;
-    height: 45px;
-    margin: 10px;
+    color: black;
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
+    :hover {
+      color: #5be7c6;
+    }
   }
 `;
 

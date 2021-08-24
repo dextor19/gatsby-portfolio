@@ -97,7 +97,7 @@ const Skills = () => {
     const revealTitle = useRef(null);
     const images = useGallery();
     const prefersReducedMotion = usePrefersReducedMotion();
-    console.log(useGallery())
+    
     useEffect(() => {
       if (prefersReducedMotion) {
         return;

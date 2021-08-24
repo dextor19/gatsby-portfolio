@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from "react"
+import React, {useRef, useEffect, useState} from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
@@ -48,9 +48,17 @@ const CallToActionButton = styled.button`
     }
 `;
 
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+    color: black;
+    :hover {
+      color: #5be7c6;
+    }
+`;
+
 const Hero = (props) => {
     const width = window.innerWidth;
     const height = window.innerHeight;
+    const [fontColor, setFontColor] = useState('black');
     const revealTitle1 = useRef(null);
     const revealTitle2 = useRef(null);
     const revealParagraph = useRef(null);
@@ -79,7 +87,7 @@ const Hero = (props) => {
         <Container2>
           <img src={backgroundImage} width="700rem"></img>
           <AnchorLink to="/#projects">
-              <FontAwesomeIcon icon={ faArrowDown } size="3x" color="black" /> 
+              <StyledFontAwesomeIcon id="arrow" icon={ faArrowDown } size="3x" /> 
           </AnchorLink>
         </Container2>
       </StyledHero>

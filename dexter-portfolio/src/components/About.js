@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { srConfig } from './config';
 import sr from '../utils/sr';
 import { usePrefersReducedMotion } from '../hooks';
+import codingHands from "../images/Coding_Hands.svg";
 
 const StyledAboutSection = styled.section`
   display: flex;
@@ -32,6 +33,14 @@ const StyledAboutSection = styled.section`
   }
 `;
 
+const Container = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+`;
+
 const About = () => {
     const revealTitle = useRef(null);
     const prefersReducedMotion = usePrefersReducedMotion();
@@ -52,6 +61,10 @@ const About = () => {
                 </svg>
             </div>
             <h1 ref={revealTitle}>ABOUT</h1>
+            <Container>
+                <p>paragraph for testing out the about section.</p>
+                <img src={codingHands} width="400rem"></img>
+            </Container>
         </StyledAboutSection>
     );
 };

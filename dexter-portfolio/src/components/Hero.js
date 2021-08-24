@@ -6,14 +6,18 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { srConfig } from './config';
 import sr from '../utils/sr';
 import { usePrefersReducedMotion } from '../hooks';
+import backgroundImage from "../images/Coding _Monochromatic.svg";
 
 const StyledHero = styled.section`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     min-height: 95vh;
     background-color: #f7f7f7;
+`;
+
+const Container = styled.div`
 `;
 
 const HeroH1 = styled.h1`
@@ -42,12 +46,16 @@ const Hero = (props) => {
 
     return(
       <StyledHero>
-        <h3 ref={revealTitle1}>Hi, my name is</h3>
-        <HeroH1 ref={revealTitle2}>Dexter Griffiths</HeroH1>
-        <p ref={revealParagraph}>BRITISH WEB DEVELOPER LIVING IN JAPAN</p>
-        <AnchorLink to="/#projects">
-            <FontAwesomeIcon icon={ faArrowDown } size="3x" color="black" /> 
-        </AnchorLink>
+        <Container>
+          <h3 ref={revealTitle1}>Hi, my name is</h3>
+          <HeroH1 ref={revealTitle2}>Dexter Griffiths</HeroH1>
+          <p ref={revealParagraph}>BRITISH WEB DEVELOPER LIVING IN JAPAN</p>
+          <AnchorLink to="/#projects">
+              <FontAwesomeIcon icon={ faArrowDown } size="3x" color="black" /> 
+          </AnchorLink>
+        </Container>
+        
+        <img src={backgroundImage} width="700rem"></img>
       </StyledHero>
     )
   }

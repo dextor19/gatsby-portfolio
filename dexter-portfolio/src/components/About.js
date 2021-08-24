@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { srConfig } from './config';
 import sr from '../utils/sr';
 import { usePrefersReducedMotion } from '../hooks';
-import codingHands from "../images/Coding_Hands.svg";
+import codingHands from "../images/illustrations/Coding_Hands.svg";
 
 const StyledAboutSection = styled.section`
   display: flex;

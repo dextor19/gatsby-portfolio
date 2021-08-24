@@ -6,7 +6,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { srConfig } from './config';
 import sr from '../utils/sr';
 import { usePrefersReducedMotion } from '../hooks';
-import backgroundImage from "../images/Coding _Monochromatic.svg";
+import backgroundImage from "../images/illustrations/Coding _Monochromatic.svg";
 
 const StyledHero = styled.section`
     display: flex;

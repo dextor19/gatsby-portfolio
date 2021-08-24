@@ -36,15 +36,16 @@ const HeroH1 = styled.h1`
 
 const CallToActionButton = styled.button`
     background-color: #64ffda;
-    border: 1px solid #64ffda;
+    border: 2px solid black;
     border-radius: 4px;
     font-weight: bold;
-    color: white;
+    color: black;
     font-size: 1.3em;
     padding: 10px 50px;
     text-transform: uppercase;
     :hover{
-        background-color: #64ffda;
+        background-color: #233554;
+        color: white;
     }
 `;
 

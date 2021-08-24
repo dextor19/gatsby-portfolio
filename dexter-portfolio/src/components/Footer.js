@@ -5,7 +5,7 @@ import { Icon } from './icons';
 const StyledFooter = styled.footer`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   color: var(--white);
   background: var(--primary-color);
   padding: 1rem;

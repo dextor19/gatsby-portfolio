@@ -29,9 +29,8 @@ const Container2 = styled.div`
 `;
 
 const HeroH1 = styled.h1`
-    font-size: 50px;
-    margin-top: 0;
-    margin-bottom: 10px;
+    font-size: 5rem;
+    margin: 0;
 `;
 
 const CallToActionButton = styled.button`

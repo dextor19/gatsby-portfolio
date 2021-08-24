@@ -13,17 +13,39 @@ const StyledHero = styled.section`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    min-height: 95vh;
+    min-height: 100vh;
     background-color: #f7f7f7;
 `;
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Container2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 `;
 
 const HeroH1 = styled.h1`
     font-size: 50px;
     margin-top: 0;
     margin-bottom: 10px;
+`;
+
+const CallToActionButton = styled.button`
+    background-color: #64ffda;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    font-size: 1.3em;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    :hover{
+        background-color: #64ffda;
+    }
 `;
 
 const Hero = (props) => {
@@ -49,13 +71,17 @@ const Hero = (props) => {
         <Container>
           <h3 ref={revealTitle1}>Hi, my name is</h3>
           <HeroH1 ref={revealTitle2}>Dexter Griffiths</HeroH1>
-          <p ref={revealParagraph}>BRITISH WEB DEVELOPER LIVING IN JAPAN</p>
+          <p ref={revealParagraph}>British web developer living in japan</p>
+          <AnchorLink to="/#contact">
+              <CallToActionButton>GET IN TOUCH</CallToActionButton>
+          </AnchorLink>
+        </Container>
+        <Container2>
+          <img src={backgroundImage} width="700rem"></img>
           <AnchorLink to="/#projects">
               <FontAwesomeIcon icon={ faArrowDown } size="3x" color="black" /> 
           </AnchorLink>
-        </Container>
-        
-        <img src={backgroundImage} width="700rem"></img>
+        </Container2>
       </StyledHero>
     )
   }

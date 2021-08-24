@@ -6,6 +6,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { srConfig } from './config';
 import sr from '../utils/sr';
 import { usePrefersReducedMotion } from '../hooks';
+import { Icon } from './icons';
 import backgroundImage from "../images/illustrations/Coding _Monochromatic.svg";
 
 const StyledHero = styled.section`
@@ -26,6 +27,19 @@ const Container2 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+`;
+
+const Container3 = styled.div`
+  display: flex;
+  flex-direction: row;
+  svg {
+    background-color: #233554;
+    border-radius: 15px;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    margin: 10px;
+  }
 `;
 
 const HeroH1 = styled.h1`
@@ -53,6 +67,16 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
     :hover {
       color: #5be7c6;
     }
+`;
+
+const StyledIcon = styled(Icon)`
+  svg {
+    background-color: black;
+    fill: black;
+    :hover {
+      color: #5be7c6;
+    }
+  }
 `;
 
 const Hero = (props) => {
@@ -83,6 +107,17 @@ const Hero = (props) => {
           <AnchorLink to="/#contact">
               <CallToActionButton>GET IN TOUCH</CallToActionButton>
           </AnchorLink>
+          <Container3>
+            <a href="https://github.com/dextor19" aria-label="GitHub Link" target="_blank" rel="noreferrer">
+                  <Icon name="GitHub" />
+            </a>
+            <a href="https://linkedin.com/in/dexter-griffiths-18750765" aria-label="Linkedin Link" target="_blank" rel="noreferrer">
+                  <Icon name="Linkedin" />
+            </a>
+            <a href="https://twitter.com/DexGriffiths" aria-label="Twitter Link" target="_blank" rel="noreferrer">
+                  <Icon name="Twitter" />
+            </a>
+          </Container3>
         </Container>
         <Container2>
           <img src={backgroundImage} width="700rem"></img>

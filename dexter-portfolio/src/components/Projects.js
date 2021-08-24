@@ -106,7 +106,7 @@ const StyledProject = styled.li`
     .folder {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-end;
       color: #64ffda;
       svg {
         width: 40px;
@@ -159,7 +159,7 @@ const StyledProject = styled.li`
     }
   }
   .project-description {
-    color: #a8b2d1;
+    color: #ffffffc4;
     font-size: 17px;
     a {
     }
@@ -172,7 +172,7 @@ const StyledProject = styled.li`
     padding: 0;
     margin: 20px 0 0 0;
     list-style: none;
-    color: #8892b0;
+    color: #54d6b8;
     li {
       font-size: 14px;
       line-height: 1.75;
@@ -235,7 +235,6 @@ const Projects = () => {
         <header>
           <div className="project-top">
             <div className="folder">
-                <Icon name="Folder" />
                 <div className="project-links">
                 <a href={github} aria-label="GitHub Link" target="_blank" rel="noreferrer">
                 <Icon name="GitHub" />

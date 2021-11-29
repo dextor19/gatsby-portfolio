@@ -42,13 +42,13 @@ const Container = styled.div`
 `;
 
 const Paragraphs = styled.div`
-    width: 33%;
+    width: 40%;
     display: flex;
     align-items: right;
     justify-content: space-evenly;
     flex-direction: column;
     p {
-        max-width: 550px;
+        max-width: 700px;
         margin: 8px;
         letter-spacing: 1.3px;
     }

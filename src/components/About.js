@@ -37,10 +37,22 @@ const Container = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: row;
 `;
 
+const Paragraphs = styled.div`
+    width: 33%;
+    display: flex;
+    align-items: right;
+    justify-content: space-evenly;
+    flex-direction: column;
+    p {
+        max-width: 550px;
+        margin: 8px;
+        letter-spacing: 1.3px;
+    }
+`;
 const About = () => {
     const revealTitle = useRef(null);
     const prefersReducedMotion = usePrefersReducedMotion();
@@ -62,7 +74,13 @@ const About = () => {
             </div>
             <h1 ref={revealTitle}>ABOUT</h1>
             <Container>
-                <p>paragraph for testing out the about section.</p>
+                <Paragraphs>
+                <p>Hi! My name is Dexter and I'm a software engineer living in Japan. </p>
+                <p> I create high quality web applications and websites using Javascript, React and Node.js. 
+                    I currently work with a Japanese company to build cyber security applications to protect businesses and public intiutions from cyber attacks.</p>
+                <p>Over the years, I have become passionate about open source software and working with other developers to build innovative solution. 
+                    Recently, I have been focused on TypeScript due to the benefits of strict typing for both frontend and backend development.</p>
+                </Paragraphs>
                 <img src={codingHands} width="400rem"></img>
             </Container>
         </StyledAboutSection>

@@ -25,7 +25,7 @@ const IndexPage = () => {
   return (
     <>
     <Layout fixedNavbar>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Dexter Griffiths" keywords={[`gatsby`, `application`, `react`]} />
       <Hero />
       <Projects />
       <About />

@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import styled from "styled-components"
 import CallToAction from "../components/CallToAction"
 

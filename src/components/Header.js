@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import { Container } from "./layoutComponents"
+import { Container } from "./LayoutComponents"
 
 const Header = ({ siteTitle, className }) => (
   <header className={className}>

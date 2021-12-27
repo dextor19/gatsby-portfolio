@@ -9,7 +9,7 @@ import Projects from "../components/Projects"
 import ContactForm from "../components/Contact"
 import About from "../components/About"
 import Skills from "../components/Skills"
-import { Container, Section } from "../components/layoutComponents"
+import { Container, Section } from "../components/LayoutComponents"
 
 const IndexPage = () => {
   

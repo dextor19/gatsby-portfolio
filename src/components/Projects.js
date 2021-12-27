@@ -4,8 +4,10 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { srConfig } from './config';
 import sr from '../utils/sr';
-import { Icon } from './icons';
 import { usePrefersReducedMotion } from '../hooks';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const StyledProjectsSection = styled.section`
   display: flex;
@@ -237,7 +239,7 @@ const Projects = () => {
             <div className="folder">
                 <div className="project-links">
                 <a href={github} aria-label="GitHub Link" target="_blank" rel="noreferrer">
-                <Icon name="GitHub" />
+                  <FontAwesomeIcon icon={ faGithub } /> 
                 </a>
                 <a
                   href={external}
@@ -245,7 +247,7 @@ const Projects = () => {
                   className="external"
                   target="_blank"
                   rel="noreferrer">
-                    <Icon name="External" />
+                    <FontAwesomeIcon icon={ faExternalLinkAlt } /> 
                 </a>
             </div>
             </div>

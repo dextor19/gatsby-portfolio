@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { Icon } from './icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -25,18 +26,25 @@ const Container3 = styled.div`
   }
 `;
 
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+    color: white;
+    :hover {
+      color: #5be7c6;
+    }
+`;
+
 const Footer = () => (
   <StyledFooter>
       © {new Date().getFullYear()}, Dexter Griffiths
       <Container3>
         <a href="https://github.com/dextor19" aria-label="GitHub Link" target="_blank" rel="noreferrer">
-              <Icon name="GitHub" />
+          <StyledFontAwesomeIcon icon={ faGithub } size="2x" /> 
         </a>
         <a href="https://linkedin.com/in/dexter-griffiths-18750765" aria-label="Linkedin Link" target="_blank" rel="noreferrer">
-              <Icon name="Linkedin" />
+          <StyledFontAwesomeIcon icon={ faLinkedin } size="2x" /> 
         </a>
         <a href="https://twitter.com/DexGriffiths" aria-label="Twitter Link" target="_blank" rel="noreferrer">
-              <Icon name="Twitter" />
+          <StyledFontAwesomeIcon icon={ faTwitter } size="2x" /> 
         </a>
       </Container3>
   </StyledFooter>

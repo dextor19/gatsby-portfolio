@@ -2,11 +2,11 @@ import React, {useRef, useEffect, useState} from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { srConfig } from './config';
 import sr from '../utils/sr';
 import { usePrefersReducedMotion } from '../hooks';
-import { Icon } from './icons';
 import backgroundImage from "../images/illustrations/Coding _Monochromatic.svg";
 
 const StyledHero = styled.section`
@@ -75,16 +75,6 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
     }
 `;
 
-const StyledIcon = styled(Icon)`
-  svg {
-    background-color: black;
-    fill: black;
-    :hover {
-      color: #5be7c6;
-    }
-  }
-`;
-
 const Hero = (props) => {
     const width = window.innerWidth;
     const height = window.innerHeight;
@@ -115,13 +105,13 @@ const Hero = (props) => {
           </AnchorLink>
           <Container3>
             <a href="https://github.com/dextor19" aria-label="GitHub Link" target="_blank" rel="noreferrer">
-                  <Icon name="GitHub" />
+                <StyledFontAwesomeIcon icon={ faGithub } size="2x" /> 
             </a>
             <a href="https://linkedin.com/in/dexter-griffiths-18750765" aria-label="Linkedin Link" target="_blank" rel="noreferrer">
-                  <Icon name="Linkedin" />
+              <StyledFontAwesomeIcon icon={ faLinkedin } size="2x" /> 
             </a>
             <a href="https://twitter.com/DexGriffiths" aria-label="Twitter Link" target="_blank" rel="noreferrer">
-                  <Icon name="Twitter" />
+              <StyledFontAwesomeIcon icon={ faTwitter } size="2x" /> 
             </a>
           </Container3>
         </Container>

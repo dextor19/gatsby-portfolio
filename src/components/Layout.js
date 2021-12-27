@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 import { GlobalStyle } from "./globalStyle"
-import { MainWrapper } from "./layoutComponents"
+import { MainWrapper } from "./LayoutComponents"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import styled from "styled-components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

@@ -1,15 +1,14 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Helmet from "react-helmet"
-import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import Layout from "./Layout"
-import SEO from "./SEO"
-import components from "./mdxComponents"
-import styled from "styled-components"
-import CallToAction from "../components/CallToAction"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import { MDXProvider } from "@mdx-js/react";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import Layout from "./Layout";
+import SEO from "./SEO";
+import components from "./mdxComponents";
+import styled from "styled-components";
+import CallToAction from "./CallToAction";
 
-export const PostLayoutLink = styled(Link)`
+const PostLayoutLink = styled(Link)`
     margin: 4rem 0 2rem 0;
     display: block;
     padding: 0 1rem 3rem;

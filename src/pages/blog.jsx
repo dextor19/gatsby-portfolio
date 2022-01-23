@@ -1,21 +1,23 @@
-import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import Layout from "../components/Layout"
-import styled from "styled-components"
-import CallToAction from "../components/CallToAction"
+import React from "react";
+import { Link, useStaticQuery, graphql } from "gatsby";
+import Layout from "../components/Layout";
+import styled from "styled-components";
+import CallToAction from "../components/CallToAction";
 
 const BlogBottomBorder = styled.div`
     border-bottom: 1px solid var(--link);
-`
+`;
 
 const BlogList = styled.ul`
     padding: 1rem;
-`
+`;
+
 const BlogListItem = styled.li`
     padding: 1rem;
     list-style-type: none;
     margin-bottom: 3rem;
-`
+`;
+
 const BlogLink = styled(Link)`
     .blog__read-more {
         color: var(--link);
@@ -27,7 +29,7 @@ const BlogLink = styled(Link)`
         font-weight: 900;
       }
     }
-`
+`;
 
 const BlogIndex = ({ location }) => {
     const data = useStaticQuery(graphql`
@@ -70,7 +72,7 @@ const BlogIndex = ({ location }) => {
       </BlogList>
       <CallToAction />
     </Layout>
-  )
+  );
 }
 
-export default BlogIndex
+export default BlogIndex;

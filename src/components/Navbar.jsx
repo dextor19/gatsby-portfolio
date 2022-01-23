@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react"
-import styled from "styled-components"
-import NavbarLinks from "./NavbarLinks"
-import Logo from "./Logo"
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import NavbarLinks from './NavbarLinks';
+import Logo from './Logo';
 
 const Navigation = styled.nav`
   height: 10vh;
   width: 100%;
   display: flex;
   background-color: var(--primary-color);
-  position: ${props => (props.fixed ? "fixed" : "relative" )};
+  position: ${(props) => (props.fixed ? 'fixed' : 'relative')};
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 5vw;
@@ -24,7 +24,7 @@ const Navigation = styled.nav`
     left: 0;
     right: 0;
   }
-`
+`;
 
 const Toggle = styled.div`
   display: none;
@@ -35,7 +35,7 @@ const Toggle = styled.div`
   @media (max-width: 768px) {
     display: flex;
   }
-`
+`;
 
 const Navbox = styled.div`
   display: flex;
@@ -52,9 +52,9 @@ const Navbox = styled.div`
     background-color: var(--primary-color);
     transition: all 0.3s ease-in;
     top: 8vh;
-    left: ${props => (props.open ? "-150%" : "0")};
+    left: ${(props) => (props.open ? '-150%' : '0')};
   }
-`
+`;
 
 const Hamburger = styled.div`
   background-color: var(--white);
@@ -63,7 +63,7 @@ const Hamburger = styled.div`
   transition: all .3s linear;
   align-self: center;
   position: relative;
-  transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
+  transform: ${(props) => (props.open ? 'rotate(-45deg)' : 'inherit')};
 
   ::before,
   ::after {
@@ -76,18 +76,18 @@ const Hamburger = styled.div`
   }
 
   ::before {
-    transform: ${props =>
-      props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
+    transform: ${(props) => (props.open ? 'rotate(-90deg) translate(-10px, 0px)' : 'rotate(0deg)')};
     top: -10px;
   }
 
   ::after {
-    opacity: ${props => (props.open ? "0" : "1")};
-    transform: ${props => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
+    opacity: ${(props) => (props.open ? '0' : '1')};
+    transform: ${(props) => (props.open ? 'rotate(90deg) ' : 'rotate(0deg)')};
     top: 10px;
   }
-`
-const Navbar = ({location, fixedNav}) => {
+`;
+
+function Navbar({fixedNav}) {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
@@ -109,7 +109,7 @@ const Navbar = ({location, fixedNav}) => {
         </Navbox>
       )}
     </Navigation>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

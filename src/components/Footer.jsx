@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import React from 'react';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -10,7 +10,8 @@ const StyledFooter = styled.footer`
   color: var(--white);
   background: var(--primary-color);
   padding: 1rem;
-`
+`;
+
 const Container3 = styled.div`
   display: flex;
   flex-direction: row;
@@ -33,21 +34,23 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
     }
 `;
 
-const Footer = () => (
-  <StyledFooter>
-      © {new Date().getFullYear()}, Dexter Griffiths
+function Footer() {
+  return (
+    <StyledFooter>
+      <p>© {new Date().getFullYear()}, Dexter Griffiths</p>
       <Container3>
         <a href="https://github.com/dextor19" aria-label="GitHub Link" target="_blank" rel="noreferrer">
-          <StyledFontAwesomeIcon icon={ faGithub } size="2x" /> 
+          <StyledFontAwesomeIcon icon={faGithub} size="2x" />
         </a>
         <a href="https://linkedin.com/in/dexter-griffiths-18750765" aria-label="Linkedin Link" target="_blank" rel="noreferrer">
-          <StyledFontAwesomeIcon icon={ faLinkedin } size="2x" /> 
+          <StyledFontAwesomeIcon icon={faLinkedin} size="2x" />
         </a>
         <a href="https://twitter.com/DexGriffiths" aria-label="Twitter Link" target="_blank" rel="noreferrer">
-          <StyledFontAwesomeIcon icon={ faTwitter } size="2x" /> 
+          <StyledFontAwesomeIcon icon={faTwitter} size="2x" />
         </a>
       </Container3>
-  </StyledFooter>
-)
+    </StyledFooter>
+  );
+}
 
-export default Footer
+export default Footer;

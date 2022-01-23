@@ -1,9 +1,9 @@
-import React from "react"
-import Highlight, { defaultProps } from "prism-react-renderer"
-import vsDark from "prism-react-renderer/themes/vsDark"
-import { Line, LineContent, LineNumber } from "./lines"
+import React from 'react';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import vsDark from 'prism-react-renderer/themes/vsDark';
+import { Line, LineContent, LineNumber } from './lines';
 
-export default ({ codeString, language /* metastring */ }) => {
+export default function({ codeString, language /* metastring */ }) {
   return (
     <Highlight
       {...defaultProps}
@@ -11,16 +11,18 @@ export default ({ codeString, language /* metastring */ }) => {
       theme={vsDark}
       language={language}
     >
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+      {({
+        className, style, tokens, getLineProps, getTokenProps,
+      }) => (
         <pre
           className={className}
           style={{
             ...style,
-            padding: "20px",
-            margin: "40px 0",
-            borderRadius: "5px",
-            overflow: "scroll",
-            lineHeight: "1.4",
+            padding: '20px',
+            margin: '40px 0',
+            borderRadius: '5px',
+            overflow: 'scroll',
+            lineHeight: '1.4',
           }}
         >
           {tokens.map((line, i) => (
@@ -36,5 +38,5 @@ export default ({ codeString, language /* metastring */ }) => {
         </pre>
       )}
     </Highlight>
-  )
+  );
 }

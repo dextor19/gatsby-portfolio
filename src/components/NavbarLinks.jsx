@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const NavItem = styled(Link)`
   text-decoration: none;
@@ -40,7 +40,7 @@ const NavItem = styled(Link)`
     font-size: 1.5rem;
     z-index: 6;
   }
-`
+`;
 
 const NavItemAnchor = styled(AnchorLink)`
   text-decoration: none;
@@ -79,7 +79,8 @@ const NavItemAnchor = styled(AnchorLink)`
     font-size: 1.5rem;
     z-index: 6;
   }
-`
+`;
+
 const CallToActionButton = styled.button`
 background-color: transparent;
 border: 1px solid #64ffda;
@@ -94,7 +95,7 @@ font-weight: normal;
 }
 `;
 
-const NavbarLinks = () => {
+function NavbarLinks() {
   return (
     <>
       <NavItem to="/">Home</NavItem>
@@ -105,7 +106,7 @@ const NavbarLinks = () => {
         <CallToActionButton>GET IN TOUCH</CallToActionButton>
       </AnchorLink>
     </>
-  )
+  );
 }
 
-export default NavbarLinks
+export default NavbarLinks;

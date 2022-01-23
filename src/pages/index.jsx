@@ -21,7 +21,7 @@ const IndexPage = () => {
   return (
     <>
       <Layout fixedNavbar>
-        <SEO title="Dexter Griffiths" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO title="Dexter Griffiths" keywords={['gatsby', 'application', 'react']} />
         <Hero />
         <Projects />
         <About />
@@ -29,7 +29,7 @@ const IndexPage = () => {
         <ContactForm />
       </Layout>
     </>
-    );
-  }
+  );
+};
 
 export default IndexPage;

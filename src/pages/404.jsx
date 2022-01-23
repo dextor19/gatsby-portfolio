@@ -1,7 +1,7 @@
-import React from "react";
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
+import React from 'react';
 import styled from 'styled-components';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
 const Styled404Section = styled.section`
   display: flex;
@@ -23,6 +23,6 @@ const NotFoundPage = () => (
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     </Styled404Section>
   </Layout>
-)
+);
 
 export default NotFoundPage;

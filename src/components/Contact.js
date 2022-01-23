@@ -1,8 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react'
 import styled from "styled-components"
 import { navigate } from "gatsby"
-import { srConfig } from './config';
-import sr from '../utils/sr';
 import { usePrefersReducedMotion } from '../hooks';
 
 const StyledContactSection = styled.section`
@@ -90,20 +88,11 @@ const Contact = () => {
         .catch((error) => alert(error))
     }
 
-    const revealTitle = useRef(null);
     const prefersReducedMotion = usePrefersReducedMotion();
-  
-    useEffect(() => {
-      if (prefersReducedMotion) {
-        return;
-      }
-  
-      sr.reveal(revealTitle.current, srConfig());
-    }, []);
 
     return (
         <StyledContactSection id="contact">
-          <h1 ref={revealTitle}>START YOUR NEXT PROJECT</h1>
+          <h1>START YOUR NEXT PROJECT</h1>
           <form
               name="contact"
               method="post"

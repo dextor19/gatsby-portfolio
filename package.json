@@ -10,7 +10,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint": "eslint src/**/*.js src/**/*.jsx"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -32,14 +33,20 @@
     "gatsby-transformer-remark": "^4.8.0",
     "gatsby-transformer-sharp": "^3.10.0",
     "prism-react-renderer": "^1.2.1",
+    "prop-types": "^15.8.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-transition-group": "^4.4.2",
-    "scrollreveal": "^4.0.9",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "2.3.2"
   },
   "repository": {

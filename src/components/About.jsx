@@ -61,7 +61,7 @@ function About() {
       <h1>ABOUT</h1>
       <Container>
         <Paragraphs>
-          <p>Hi! My name is Dexter and I`&apos;`m a software engineer living in Japan. </p>
+          <p>Hi! My name is Dexter and I&apos;m a software engineer living in Japan. </p>
           <p> I create high quality web applications and websites using Javascript, React and Node.js.</p>
           <p>I currently work with a Japanese company to build cyber security applications to protect businesses and public intiutions from cyber attacks.</p>
           <p>Over the years, I have become passionate about open source software and working with other developers to build innovative solution.</p> 

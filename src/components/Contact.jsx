@@ -121,13 +121,6 @@ function Contact() {
         </p>
         <p>
           <label>
-            SUBJECT
-            <br />
-            <input type="text" name="subject" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
             MESSAGE
             <br />
             <textarea name="message" onChange={handleChange} />

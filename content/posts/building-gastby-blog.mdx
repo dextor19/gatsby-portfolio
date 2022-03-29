@@ -1,14 +1,169 @@
 ---
-title: Building Gastby Blog
+title: Building a Gastby Blog using Markdown
 slug: building-gastby-blog
-date: "2021-12-27"
-author: Dexter Griffiths
+date: "2022-03-29"
+author: Dexter
 preview:
-  TBD
+  building a gatsby blog using markdown MDX files.
 categories:
-  - TBD
+  - blog
 keywords:
-  - TBD
+  - blog, mdx, markdown, gatsby, react
 ---
 
-TBD
+# Markdown Blog Posts
+Seems that most of the personal portfolio's using Gatsby in 2021 was using markdown files to add posts to personal portfolio blogs. At the time I was generally identifying what was the best way to generate a personal portfolio and Gastby came up many times due to the fact that it uses Static Site Generator at build time to generate Javascript/HTML/CSS from multiple content sources (markdown files).
+
+Another big benefit was that you could upload to a free cloud hosting service like netlify and pay nothing for a personal portfolio website. Otherwise, you would have to look for Drupal and Wordpress hosting providers that you would have monthly fee to keep the site up and running with PHP and a MySQL database.
+
+For a while now I have seen myself preferring writing posts and notes in markdown format over general word document format. Once getting the hang of the syntax it is super fast to generate perfectly generated blog posts and notes in a matter of seconds. I highly recommend making your first blog website using Gastby and markdown files, however be careful how you implement the CSS since I found out that building your own CSS-in-JS components is a quite a hurdle. Best to stick with CSS frameworks like Material UI and Chakra UI in the beginning.
+
+I will give some tips and tell you some of the steps I took to get basic blog website using Gastby and Markdown files.
+
+# Setup an Empty Gatsby Project
+
+you can clone the repo I used as an empty gatsby project:
+
+https://github.com/gatsbyjs/gatsby-starter-hello-world
+
+# Install Dependencies 
+
+you will need to install all the dependencies for this repo first, however after thoses have been installed you will have install an addtional few dependencies listed below:
+
+```
+npm install gatsby-plugin-mdx @mdx-js/mdx@v1 @mdx-js/react@v1 gatsby-source-filesystem
+```
+
+# Gatsby Plugins
+
+you will need to a filesystem path for gastby to know were the mdx files are located in your project `/content/posts`. Gatsby also needs to know all the formats that you are using for markdown files which will be .mdx and .md.
+then added the following to the `gatsby-config.js` file:
+```
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/content/posts/`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        extensions: ['.mdx', '.md'],
+      },
+    },
+  ],
+}
+```
+
+# React Component
+
+below is the minimum to show the body of the mdx file using a react component and importing gatsby-plugin-mdx. the graphql query below is that allows you to get the title, date, author, preview, keywords, body and timeToRead from the mdx file. 
+
+best to create a new folder called `components` inside your `src` folder and add the below code into a new react component file e.g. `postsLayout.jsx`.
+```
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import { MDXProvider } from '@mdx-js/react';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+
+export default function PageTemplate({ data: { mdx } }) {
+  return (
+    <>
+        <div>
+        <MDXProvider>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+        </MDXProvider>
+        </div>
+    </>
+  );
+}
+
+export const pageQuery = graphql`
+query BlogPostQuery($id: String) {
+    mdx(id: { eq: $id }) {
+      id
+      body
+      frontmatter {
+        title
+        date
+        author
+        preview
+        keywords
+      }
+      timeToRead
+    }
+  }
+`;
+```
+# Gatsby Node
+
+Creating the `gatsby-node.js` will have a specific format since you need gatsby to automatically generate new pages from the mdx files using the code below. you can see that the regex is calling from a `/content/posts/` directory so you will need to make this file path at the root of the project.
+
+additionally you can see in the `component` section we need to specify the path to our newly create react component so that the gatsby node module knows how to format the date from the mdx files.
+```
+const path = require('path');
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions;
+
+  const result = await graphql(`
+  {
+    allMdx(filter: {fileAbsolutePath: {regex: "/content/posts/"}}) {
+      edges {
+        node {
+          id
+          frontmatter {
+            slug
+          }
+        }
+      }
+    }
+  }
+  `);
+
+  const posts = result.data.allMdx.edges;
+  posts.forEach(({ node }, index) => {
+    createPage({
+      path: node.frontmatter.slug,
+      component: path.resolve('./src/components/postsLayout.jsx'),
+      context: { id: node.id },
+    });
+  });
+};
+
+```
+
+# MDX File Format
+
+finally we have the mdx file content that needs to being in the following format to be able to see content from the graphql queries we created above, however you can modify and added sections to this mdx format however do not remove the `slug` since this section specifies the link to the newly generated static webpage.
+```
+---
+title:
+slug:
+date:
+author:
+preview:
+  // write the preview here
+categories:
+  - // category names here
+keywords:
+  - // keywords here
+---
+
+// write the body markdown content here
+```
+
+# Conclusion
+
+I guess the first think to do before trying to make your first blog with Gatsby is to read the documentation on the Gatsby documentation website and understand how Gatsby Node, Gatsby Config works to get a better understanding of how the framework generates static webpages from the content in .mdx files.
+
+Also learning about how GraphQL works will also help you be able to edit the graphql queries to make more interesting layouts for the blog posts.
+
+You will probably need to add in an actual layout with CSS, SEO, etc... once you have nailed down the Gatsby fundamentals. This will probably take you the most amount of time.
+
+However, once you have the formula down, you build the layout of your blog website once and only add new markdown files over time. 
+
+Simple and easy to maintain.

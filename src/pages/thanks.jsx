@@ -17,7 +17,7 @@ const StyledSection = styled.section`
 
 const ThanksPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <SEO title="Thank you" />
       <StyledSection>
           <h1>Thank you</h1>
           <p>Thank you for the message, I will get back to you soon.</p>

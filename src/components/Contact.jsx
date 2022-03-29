@@ -127,7 +127,7 @@ function Contact() {
             <textarea name="message" onChange={handleChange} />
           </label>
         </p>
-        <div data-netlify-recaptcha="true"></div>
+        <div data-netlify-recaptcha="true" />
         <p>
           <button type="submit">Send</button>
         </p>

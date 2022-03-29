@@ -3,7 +3,6 @@ date: '2021-11-29'
 title: 'entertainment app'
 slug: react-entertainment-app.md
 github: 'https://github.com/dextor19/react-entertainment-app'
-external: 'https://github.com/dextor19/react-entertainment-app'
 tech:
   - Typscript
   - SCSS

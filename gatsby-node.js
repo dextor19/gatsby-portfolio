@@ -17,7 +17,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     }
   }
-  `)
+  `);
 
   if (result.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
@@ -37,6 +37,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       // You can use the values in this context in
       // our page layout component
       context: { id: node.id },
-    })
-  })
-}
+    });
+  });
+};

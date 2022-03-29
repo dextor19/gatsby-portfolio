@@ -79,7 +79,7 @@ function Hero() {
         <h3>Hi, my name is</h3>
         <HeroH1>Dexter Griffiths</HeroH1>
         <p>British web developer living in japan</p>
-        <AnchorLink to="/#contact">
+        <AnchorLink to="https://linkedin.com/in/dexter-griffiths-18750765">
           <CallToActionButton>GET IN TOUCH</CallToActionButton>
         </AnchorLink>
         <Container3>

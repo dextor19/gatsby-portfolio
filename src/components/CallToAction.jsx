@@ -31,7 +31,7 @@ function CallToAction() {
       <h3>NEED A WEB DEVELOPER IN JAPAN ?</h3>
       <h1>Start your next project</h1>
       <p>let's work together on your next project to build a web application experience that your customers cannot resist.</p>
-      <AnchorLink to="/#contact">
+      <AnchorLink to="https://linkedin.com/in/dexter-griffiths-18750765">
         <CallToActionButton>GET IN TOUCH</CallToActionButton>
       </AnchorLink>
     </StyledCallToActionSection>

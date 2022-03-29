@@ -34,10 +34,6 @@ export const navLinks = [
     name: 'Work',
     url: '/#projects',
   },
-  {
-    name: 'Contact',
-    url: '/#contact',
-  },
 ];
 export const colors = {
   green: '#64ffda',

@@ -102,7 +102,7 @@ function NavbarLinks() {
       <NavItemAnchor to="/#projects">Work</NavItemAnchor>
       <NavItemAnchor to="/#about">About</NavItemAnchor>
       <NavItem to="/blog">Blog</NavItem>
-      <AnchorLink to="/#contact">
+      <AnchorLink to="https://linkedin.com/in/dexter-griffiths-18750765">
         <CallToActionButton>GET IN TOUCH</CallToActionButton>
       </AnchorLink>
     </>

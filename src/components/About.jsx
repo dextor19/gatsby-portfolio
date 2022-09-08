@@ -62,10 +62,10 @@ function About() {
       <Container>
         <Paragraphs>
           <p>Hi! My name is Dexter and I&apos;m a software engineer living in Japan. </p>
-          <p> I create high quality web applications and websites using Javascript, React and Node.js.</p>
-          <p>I currently work with a Japanese company to build cyber security applications to protect businesses and public intiutions from cyber attacks.</p>
-          <p>Over the years, I have become passionate about open source software and working with other developers to build innovative solution.</p> 
-          <p>Recently, I have been focused on TypeScript due to the benefits of strict typing for both frontend and backend development.</p>
+          <p> I create high quality software applications and websites using Javascript, Typescript, Python and Go.</p>
+          <p>Currently work with a Japanese company to build cyber security software to protect businesses and public intiutions from cyber attacks.</p>
+          <p>I&apos;m passionate about open source software and working with other developers to build innovative solution.</p> 
+          <p>Recently, I have been focused on Go language due to the benefits of using Go to make efficient and secure microservices.</p>
         </Paragraphs>
         <img src={codingHands} width="400rem" alt="" />
       </Container>

@@ -28,9 +28,9 @@ const CallToActionButton = styled.button`
 function CallToAction() {
   return (
     <StyledCallToActionSection>
-      <h3>NEED A WEB DEVELOPER IN JAPAN ?</h3>
+      <h3>NEED AN EXPERIENCED SOFTWARE ENGINEER IN JAPAN ?</h3>
       <h1>Start your next project</h1>
-      <p>let's work together on your next project to build a web application experience that your customers cannot resist.</p>
+      <p>let's work together on your next project to build a service experience that your customers cannot resist.</p>
       <AnchorLink to="https://linkedin.com/in/dexter-griffiths-18750765">
         <CallToActionButton>GET IN TOUCH</CallToActionButton>
       </AnchorLink>
